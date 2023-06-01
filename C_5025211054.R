@@ -14,7 +14,6 @@ StandarDeviasi <- sd(Selisih)
 paste("Standar Deviasi = ", StandarDeviasi)
 #Standar Deviasi =  6.48074069840786
 
-
 #Penyelesaian No. 1b
 t.test (Y, X, paired = TRUE, var.equal = FALSE)  
 #t = 7.7152, df = 8, p-value = 5.664e-05

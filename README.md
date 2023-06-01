@@ -111,7 +111,7 @@ Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika dalam hal
 
 Terlebih dahulu menginstall packages dan library berikut :
 
-```
+```R
 install.packages("BSDA")
 library(BSDA)
 ```
@@ -160,18 +160,25 @@ Saya tidak setuju dengan klaim tersebut.
 </li>
 
 Karena `p-value(z=-5) > (α=0.05)` , maka H0 diterima atau berada pada daerah penerimaan. Sehingga, kesimpulannya Hipotesis Alternatif (H1) bernilai bernilai salah atau menolak H1 bahwa Rata-rata mobil dikemudikan lebih dari 25.000 kilometer per tahun
-  
-  ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/79c91400-fa76-4e0c-88d1-897d72fc8661)
 
+  <div align="center">
+
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/79c91400-fa76-4e0c-88d1-897d72fc8661)
+
+  </div>
   
   </ol>
   
 ## NO. 3
 
 > Diketahui perusahaan memiliki seorang data analyst ingin memecahkan permasalahan pengambilan keputusan dalam perusahaan tersebut. Selanjutnya didapatkanlah data berikut dari perusahaan saham tersebut.
->
+
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/b000221c-b9e8-461e-80e7-68ebe812b703)
->
+
+</div>
+
 > **Dari data diatas berilah keputusan serta kesimpulan yang didapatkan dari hasil
 > diatas. Asumsikan nilai variancenya sama, apakah ada perbedaan pada
 > rata-ratanya (α= 0.05)? Buatlah :**
@@ -182,12 +189,11 @@ $H_0$ dan $H_1$
 </li>
   
   Menentukan Hipotesis :
-```
+```R
 HO : Tidak ada perbedaan pada rata-rata saham kota Bandung (µ1) dengan rata-rata saham Kota Bali (µ2).
 H1 : Ada perbedaan pada rata-rata saham kota Bandung (µ1) dengan rata-rata saham Kota Bali (µ2).
 
 ````
-
   <li>
 Hitung sampel statistik
 </li>
@@ -212,8 +218,11 @@ tsum.test(mean.x=mean_bandung, s.x = sd_bandung, n.x = n_bandung,
           alternative = "two.side", var.equal = TRUE, conf.level = confident_level)
 ````
 
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/7cc11f58-4500-4a92-af3e-4e5a93581528)
-  
+
+</div>
   <li>
 Lakukan uji statistik (df =2)
 </li>
@@ -228,13 +237,17 @@ library(mosaic)
 
 Kemudian, untuk melakukan uji statistik(df=2) kita perlu menampilkan grafik visualisasi yang akan digunakan untuk set nilai kritikal nantinya. Fungsi yang digunakan, yaitu `plotDist()`.
 
-```
+```R
 plotDist(dist = 't', df = 2, col = "blue")
 ```
 
 Sehingga, ditampilkan grafik visualisasi untuk uji statistik dengan derajat bebas(df)=2 sebagi berikut.
 
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/7cc7382d-fdad-4d9a-9375-a77ef415813d)
+
+</div>    
   
  <li>
 Nilai kritikal
@@ -242,12 +255,16 @@ Nilai kritikal
 
 Untuk mendapatkan nilai kritikal dengan kondisi TWO-TAILED, maka digunkan fungsi `qt()` , sehingga didapatkan `nilai kritikal = 2.073873`.
 
-```
+```R
 qt(p=0.05/2, df=22, lower.tail=FALSE)
 ```
 
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/d9f5fdcf-d179-4d02-abdc-44c7c4bf69ec)
-    
+
+</div>
+
   <li>
 Keputusan
 </li>  
@@ -261,6 +278,7 @@ p-value = 0.07381 dan α = 0.05
 p-value >= α (TERIMA H0)
 
 ````
+
 Jadi keputusannya adalah menerima Hipotesis null atau H0.
 
  <li>
@@ -302,8 +320,11 @@ ggplot(GlassTempLight, aes(x = Temp, y = Light)) +
 
 Sehingga, ditampilkan plot sebagai berikut :
 
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/d058cb5a-793d-4bc7-b5f2-68cc8a24ca48)
 
+</div>
   <li>
 Lakukan uji ANOVA dua arah.
 </li>
@@ -319,7 +340,11 @@ anova <- aov(Light ~ Glass*Temp_Factor, data = GlassTempLight)
 summary(anova)
 ```
 
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/f27181b2-935e-42da-a95b-673d10df228d)
+
+</div>
 
   <li>
 Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi).
@@ -337,4 +362,10 @@ SummaryData <- group_by(GlassTempLight, Glass, Temp) %>%
 print(SummaryData)
 ```
 
+<div align="center">
+
 ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/99404227-d70f-445e-bd24-0554f5e9dace)
+
+</div>
+
+</ol>
