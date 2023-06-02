@@ -11,7 +11,7 @@
 
 <div align=justify>
 
-### **Soal 1**
+## NO. 1
 
 Seorang peneliti melakukan penelitian mengenai pengaruh aktivitas $A$ terhadap kadar saturasi oksigen pada manusia. Peneliti tersebut mengambil sampel sebanyak 9 responden. Pertama, sebelum melakukan aktivitas $A$, peneliti mencatat kadar saturasi oksigen dari 9 responden tersebut. Kemudian, 9 responden tersebut diminta melakukan aktivitas $A$. Setelah 15 menit, peneliti tersebut mencatat kembali kadar saturasi oksigen dari 9 responden tersebut. Berikut data dari responden mengenai kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas $A$.
 
@@ -138,7 +138,7 @@ Membuat Hipotesis H0 dan H1 :
 # significant level (α)= 5% = 0,05
 ```
 
-  <ol type="a">
+<ol type="a">
 <li>
 Apakah Anda setuju dengan klaim tersebut? Jelaskan!
 </li>
@@ -147,10 +147,12 @@ Karena n >= 30 maka dapat digunakan distribusi normal dengan uji z-distribution.
 zsum.test(mean.x = 23500, sigma.x = 3000, n.x = 100, alternative = "greater", mu = 25000, conf.level = 0.95)  
 ```
   <div align=center>
+    
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/2435ff47-9b02-4425-9d60-e77eb2f55d58)
 
   </div>
 
-Berdasarkan hasil yang telah didapatkan, H1 bernilai salah bahwa Rata-rata mobil dikemudikan lebih dari 25.000 kilometer per tahun
+Berdasarkan hasil yang telah didapatkan, H1 bernilai salah bahwa Rata-rata mobil dikemudikan kurang dari 25.000 kilometer per tahun
 Saya tidak setuju dengan klaim tersebut.
 
 <li>
@@ -158,24 +160,25 @@ Saya tidak setuju dengan klaim tersebut.
 </li>
 
 Karena `p-value(z=-5) > (α=0.05)` , maka H0 diterima atau berada pada daerah penerimaan. Sehingga, kesimpulannya Hipotesis Alternatif (H1) bernilai bernilai salah atau menolak H1 bahwa Rata-rata mobil dikemudikan lebih dari 25.000 kilometer per tahun
+  
+  ![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/79c91400-fa76-4e0c-88d1-897d72fc8661)
 
+  
+  </ol>
+  
 ## NO. 3
 
 > Diketahui perusahaan memiliki seorang data analyst ingin memecahkan permasalahan pengambilan keputusan dalam perusahaan tersebut. Selanjutnya didapatkanlah data berikut dari perusahaan saham tersebut.
 >
-> <img width="323" alt="image" src="https://user-images.githubusercontent.com/103252800/206852836-ae3397e6-1840-40cc-837f-17455d2d840e.png">
-> <img width="321" alt="image" src="https://user-images.githubusercontent.com/103252800/206852842-6c6a7bd5-4790-4fcb-8303-bdb96324b51e.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/b000221c-b9e8-461e-80e7-68ebe812b703)
 >
 > **Dari data diatas berilah keputusan serta kesimpulan yang didapatkan dari hasil
 > diatas. Asumsikan nilai variancenya sama, apakah ada perbedaan pada
 > rata-ratanya (α= 0.05)? Buatlah :**
 
-  <ol type="a">
-
+<ol type="a">
 <li>
-
 $H_0$ dan $H_1$
-
 </li>
   
   Menentukan Hipotesis :
@@ -209,7 +212,7 @@ tsum.test(mean.x=mean_bandung, s.x = sd_bandung, n.x = n_bandung,
           alternative = "two.side", var.equal = TRUE, conf.level = confident_level)
 ````
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/103252800/207232910-5f8053e6-65a1-4d6c-84a0-bdcfd2882ca4.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/7cc11f58-4500-4a92-af3e-4e5a93581528)
   
   <li>
 Lakukan uji statistik (df =2)
@@ -231,7 +234,7 @@ plotDist(dist = 't', df = 2, col = "blue")
 
 Sehingga, ditampilkan grafik visualisasi untuk uji statistik dengan derajat bebas(df)=2 sebagi berikut.
 
-<img width="481" alt="image" src="https://user-images.githubusercontent.com/103252800/207234114-270b5ec4-c1fe-4098-a075-2bfcaaa3c800.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/7cc7382d-fdad-4d9a-9375-a77ef415813d)
   
  <li>
 Nilai kritikal
@@ -243,7 +246,7 @@ Untuk mendapatkan nilai kritikal dengan kondisi TWO-TAILED, maka digunkan fungsi
 qt(p=0.05/2, df=22, lower.tail=FALSE)
 ```
 
-<img width="481" alt="image" src="https://user-images.githubusercontent.com/103252800/207234420-b43d1f73-4f5a-403f-a5d2-610ec807c36b.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/d9f5fdcf-d179-4d02-abdc-44c7c4bf69ec)
     
   <li>
 Keputusan
@@ -268,7 +271,7 @@ Berdasarkan keputusan pada no. 3e, maka kesimpulannya:
 
 Menerima Hipotesis null atau H0 bahwa Tidak ada perbedaan pada rata-rata saham kota Bandung (µ1) dengan rata-rata saham Kota Bali (µ2).
 µ1 = µ2
-
+  </ol>
 
 ## NO. 4
 > Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca pelat muka (A, B dan C) pada keluaran cahaya tabung osiloskop. Percobaan dilakukan sebanyak 27 kali dan didapat data sebagai berikut:
@@ -299,7 +302,7 @@ ggplot(GlassTempLight, aes(x = Temp, y = Light)) +
 
 Sehingga, ditampilkan plot sebagai berikut :
 
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/207243646-a885567b-80f3-4324-b769-7de6d495ab86.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/d058cb5a-793d-4bc7-b5f2-68cc8a24ca48)
 
   <li>
 Lakukan uji ANOVA dua arah.
@@ -316,7 +319,7 @@ anova <- aov(Light ~ Glass*Temp_Factor, data = GlassTempLight)
 summary(anova)
 ```
 
-<img width="478" alt="image" src="https://user-images.githubusercontent.com/103252800/207244986-a2aceb7c-5a12-4f54-9c61-1e64020f090f.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/f27181b2-935e-42da-a95b-673d10df228d)
 
   <li>
 Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi).
@@ -334,4 +337,4 @@ SummaryData <- group_by(GlassTempLight, Glass, Temp) %>%
 print(SummaryData)
 ```
 
-<img width="479" alt="image" src="https://user-images.githubusercontent.com/103252800/207245448-3e87e478-92e6-4715-8b6e-4002509d6ddc.png">
+![image](https://github.com/VanGarman21/Prak2_Probstat2023_C_5025211054/assets/100523471/99404227-d70f-445e-bd24-0554f5e9dace)
